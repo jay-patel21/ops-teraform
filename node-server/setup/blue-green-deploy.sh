@@ -12,7 +12,8 @@ MAX_RETRIES=$((TIMEOUT / SLEEP_INTERVAL))
 
 TRAEFIK_NETWORK="traefik_webgateway"
 TRAEFIK_API_URL="http://localhost:8080/api/http/services"
-
+REGION="${REGION}"
+REPO_URL="${REPO_URL}"
 
 # Find which service is currently active
 if docker ps --format "{{.Names}}" | grep -q "$BLUE_SERVICE"; then

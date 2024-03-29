@@ -4,6 +4,8 @@ variable "public_key" {}
 variable "security_groups_id" {}
 variable "instance_type" {}
 variable "ecr_image" {}
+variable "region" {}
+
 
 
 output "ssh_connection_string_for_node_server" {
@@ -43,7 +45,7 @@ resource "aws_instance" "node_server" {
   }
 
   provisioner "file" {
-    source    = "${path.module}/setup/blue-green-deploy.sh"
+    content    = templatefile("${path.module}/setup/blue-green-deploy.sh", {REGION = var.region, REPO_URL = var.ecr_image })
     destination = "/home/ubuntu/blue-green-deploy.sh"
   }
 

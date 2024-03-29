@@ -34,5 +34,6 @@ module "node_server" {
   security_groups_id = [module.security_groups.aws_security_group_id, module.security_groups.ec2_security_grouo_node_server_id]
   public_key = var.public_key_backend_service
   ecr_image = module.container_registry.node_service_image_url
+  region = var.aws_region
 }
 

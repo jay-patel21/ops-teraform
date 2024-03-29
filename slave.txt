@@ -1,0 +1,28 @@
+slave
+sudo adduser jenkins --gecos ""
+sudo usermod -aG docker jenkins
+su jenkins
+newgrp docker
+mkdir /home/jenkins/agent
+mkdir ~/.ssh && cd ~/.ssh
+ssh-keygen -f ~/.ssh/jenkins_agent_key
+cat jenkins_agent_key.pub >> ~/.ssh/authorized_keys
+
+
+
+jenkins
+login
+install docker, docker, pipeline, ssh agent, ecr
+set crdentials for slave, node_server and ecr
+create node
+Create pipeline with webhook
+
+code
+change ip
+
+node-server
+run newgrp docker
+chmod 700 blue-green-deploy.sh
+run treafik: docker compose --project-name=traefik --file docker-compose.traefik.yml up --detach 
+
+
