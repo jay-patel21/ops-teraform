@@ -15,13 +15,13 @@ AWS
  - ## EC2 (Jenkins master)
    we have run the scripts while creating the ec2 server using the userdata (provided by aws) to setup the master node for our jenkins
    ### installed tools and utilities
-   -java
-   -jenkins
+   - java
+   - jenkins
 
  - ## EC2 (Jenkins master)
    We have run the scripts for setup the ec2 server where we will setup the docker environment for our jenkins slave node 
    ### installed tools and utilities
-   -Docker
+   - Docker
 
  - ## Ec2 (node app server)
    We have setup the node app server using provisioner where we will setup various services 
