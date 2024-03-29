@@ -23,7 +23,7 @@ AWS
    ### installed tools and utilities
    - Docker
 
- - ## Ec2 (node app server)
+ - ## EC2 (node app server)
    We have setup the node app server using provisioner where we will setup various services 
    ### setup tools ans utilities
    - copied blue-green-deploy.sh 
@@ -35,6 +35,8 @@ AWS
    - installed docker
    - installed docker-compose
 
+ - ## ECR
+   no external setup
 
 # Setup
 create the terraform.tfvars file by taking the reference from example.tfvars file
