@@ -15,6 +15,8 @@ TRAEFIK_API_URL="http://localhost:8080/api/http/services"
 REGION="${REGION}"
 REPO_URL="${REPO_URL}"
 
+# Remove all the non running container just to avoid the container conflicts
+docker container prune -f
 # Find which service is currently active
 if docker ps --format "{{.Names}}" | grep -q "$BLUE_SERVICE"; then
   ACTIVE_SERVICE=$BLUE_SERVICE
